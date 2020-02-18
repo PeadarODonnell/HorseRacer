@@ -1,0 +1,139 @@
+<!-- Navigation -->
+<!--
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Start Bootstrap</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+-->
+<!-- Full Page Image Header with Vertically Centered Content -->
+<body></body>
+<div class = "my-auto">
+
+<header class="masthead my-auto">
+  <button onclick = "lose();">lose!</button>
+  <p id = "demo" style = ""></p>
+  <div class="container h-100 my-auto">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 text-center">
+        <p>your cash: $<span id = "amountOwned">10000</span></p>
+
+
+
+          <div id = "racingScreen" style = "display: none; background-size: cover; background-repeat: no-repeat; background-image: url('images/theField.png');">
+            <div id ="goblinDiv" style =" position: relative; width: 100%; height: 100%; display: inline-block; border: 3px solid black;">
+	<div class = 'gob' id = 'divGoblin0' style=" left: 0px; top: 0%; position: absolute;">
+		<img id = "imgGoblin" src = "http://www.psychicsoftware.com/goblin_run_1.png" style = "width: 8vw; height: 8vw; border: 2px solid black;">
+	</div>
+	<div class = 'gob' id = 'divGoblin1' style = "position: absolute; left: 0px; top: 20%;">
+		<img id = "imgGoblin2" src = "http://www.psychicsoftware.com/goblin_run_1.png" style = "width: 8vw; height: 8vw; border: 2px solid black;">
+	</div>
+
+	<div class = 'gob' id = 'divGoblin2' style = "position: absolute; left: 0px; top: 40%;">
+		<img id = "imgGoblin3" src = "http://www.psychicsoftware.com/goblin_run_1.png" style = "width: 8vw; height: 8vw">
+	</div>
+
+	<div class = 'gob' id = 'divGoblin3' style = "position: absolute; left: 0px; top: 60%;">
+		<img id = "imgGoblin4" src = "http://www.psychicsoftware.com/goblin_run_1.png" style = "width: 8vw; height: 8vw">
+	</div>
+
+	<div class = 'gob' id = 'divGoblin4' style = "position: absolute; left: 0px; top: 78%; border: 2px solid black;">
+		<img id = "imgGoblin5" src = "http://www.psychicsoftware.com/goblin_run_1.png" style = "width: 8vw; height: 8vw">
+	</div>
+	<div style = "background-color: white; display: inline-block; bottom:0px; border: 3px solid black;">
+</div>
+</div>
+<div style = " border-left: 6px solid green;
+border-right: 6px solid green;
+height: 100%;
+position: absolute;
+left: 100%;
+margin-left: -3px;
+top: 0;"></div>
+          </div>
+          
+          
+          
+          <div id = "tvScreen">
+    <div id = "horseAndBet">
+
+        <div id = "title">
+            <p id = "titleText">LARGE ACRES</p>
+            <p class = "yellowLine"></p>
+        </div>
+
+        <div id = "floatedElements">
+
+            <div class = "chosenHorseButtons">
+                <button class = "buttona" onclick="anotherFunction(this)"><span class = "dot" id = "dot1"></span>this is a<span>button</span></button>
+                <button class = "buttona" onclick="anotherFunction(this)"><span class = "dot" id = "dot2"></span>this is a <span>button</span></button>
+                <button class = "buttona" onclick="anotherFunction(this)"><span class = "dot" id = "dot3"></span>this is a <span>button</span></button>
+                <button class = "buttona" onclick="anotherFunction(this)"><span class = "dot" id = "dot4"></span>this is a <span>button</span></button>
+                <button class = "buttona" onclick="anotherFunction(this)"><span class = "dot" id = "dot5"></span>this is a <span>button</span></button>
+            </div>
+
+            <div class = "buttonsRight">
+                <p id = "stakesParagraph">$<span id = "paragraph">0</span></p>
+                <button onclick = "myFunction(this)" id="0">$0</button>
+                <button onclick = "myFunction(this)" id="5">$5</button><br>
+                <button onclick = "myFunction(this)" id="25">$25</button>
+                <button onclick = "myFunction(this)" id = "100">$100</button><br>
+                <button onclick = "myFunction(this)" id = "250">$250</button>
+                <button onclick = "myFunction(this)" id = "1000">$1000</button><br>
+                <button onclick = "myFunction(this)" id = "2500">$2500</button>
+                <button onclick = "myFunction(this)" id = "10000">$10000</button><br>
+                <button onclick = "racingTime();" id = "win">PLACE BET</button>
+            </div>
+
+        </div>
+    <p class = "yellowLine3"></p>    
+    </div>
+</div>
+<p>The Bet: $<span id = "paragraph">0</span></p>
+<p>The Stakes: $<span id = "theStakes">0</span></p>
+      </div>
+    </div>
+  </div>
+</header>
+</div>
+<!-- Page Content -->
+<!--
+<section class="py-5">
+  <div class="container">
+    <h2 class="font-weight-light">Page Content</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus ab nulla dolorum autem nisi officiis blanditiis voluptatem hic, assumenda aspernatur facere ipsam nemo ratione cumque magnam enim fugiat reprehenderit expedita.</p>
+  </div>
+</section>
+-->
+
+<script type = "text/javascript">
+randomisedRacer();
+//testing();
+//unsure();
+</script>
+        <script src='/javascripts/win.js'></script>
+        <script src='/javascripts/theRace.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />

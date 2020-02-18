@@ -1,0 +1,237 @@
+body {
+  font: 14px 'BankGothicBold', Arial, sans-serif;
+  font-weight: bolder;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.masthead {
+  vertical-align: middle;
+  height: 100vh;
+  min-height: 500px;
+  width: 100vw;
+  background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+@font-face {
+  font-family: 'bankgothicbold';
+  src: url('bankgothic_bold-webfont.woff2') format('woff2'),
+       url('/BankGothic Bold.ttf') format("TrueType"),
+       url('bankgothic_bold-webfont.woff') format('woff');
+  font-weight: bolder;
+}
+
+
+*{
+  font-weight: bold;
+}
+body{
+  vertical-align: middle;
+  background-color: darkCyan;
+  background-image: repeating-linear-gradient(rgba(139,0,0,0), rgba(139, 0, 0, 0.05)1%);
+}
+
+#title{
+  width: 100%;
+  height: 15%;
+  vertical-align: middle;
+  border: 0px solid black;
+  background-color: darkRed;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,0.2));
+  color: white;
+}
+#titleText{
+  text-indent: 1.2vw;
+  text-align: left;
+  line-height: 6vw;
+  text-shadow: 1px 2px 4px black;
+  height:90%;
+  margin: 0px;
+  font-size: 3.2vw;
+}
+.orangeLine{
+  background-color: rgb(207, 113, 25);
+  background-color: hsl(29, 88, 81);
+  height: 5%;
+  margin: 0px;
+}
+.yellowLine{
+  background-image: linear-gradient(to left, yellow, rgba(233,233,233,0.2));
+  box-shadow: 0vw 0vw 1vw black;
+  height: 10%;
+  margin: 0px;
+}
+.yellowLine3{
+  background-color: rgb(180, 204, 24);
+  background-color: hsl(44, 100, 100);
+  height: 1%;
+  margin: 0px;
+}
+
+#floatedElements{
+  background-color: blue;
+  overflow: auto;
+  height: 84%;
+  box-sizing: border-box;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
+}
+
+/*buttons on the left*/
+.chosenHorseButtons{
+  float: left;
+  height: 100%;
+  width: 56%;
+}
+.chosenHorseButtons .buttona{
+  
+  border: none;
+  text-shadow: 0vw .1vw .2vw black;
+  font-size: 2vw;
+  transform: scaleX(1);
+  height: 20%;
+  width: 100%;
+  text-align: left;
+  padding: 2% 10% 2% 0%;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  display: block;
+  background-color: rgb(211,211,211);
+  background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(255,0,0,0.1));
+}
+
+.chosenHorseButtons .buttona span{
+  float:right;
+}
+.buttona:hover
+{
+  color: white;
+  background-color: grey;
+  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,0.1));
+  }
+
+.buttonsRight
+{
+  float:left;
+  margin: 0px;
+  font: 10px;
+  text-align:center;
+  background-color: rgb(0, 100, 0);
+  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,0.1));
+  width: 44%;
+  height: 100%;
+  border: 0px solid black;
+  }
+
+.buttonsRight button{
+  box-shadow: 0px 0px .5vw black;
+  border: none;
+  background-color: black;
+  color: rgb(240,240,240);
+  border-radius: 5%;
+  height: 12%;
+  width: 40%;
+  padding: 0%;
+  margin: 2%;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 0%;
+  font-size: 2vw;
+}
+
+.buttonsRight button:hover{
+  transform:scale(1.05, 1.1);
+  color: red;
+  background-color: black;
+}
+
+.buttonsRight #win{
+  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,0.5));
+  text-shadow: 0vw 0.2vw 0.5vw black;
+  font-size: 3.2vw;
+  height: 20%;
+  width: 86%;
+  margin-top: 4%;
+  margin-bottom: 0%;
+  background-color: darkRed;
+  color: white;
+}
+
+.buttonsRight button:active{
+  transform: scale(1,1);
+}
+
+
+
+.dot {
+  height: 80%;
+  width: 15%;
+  border-radius: 50%;
+  padding: 0% 20px 0% 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  box-shadow: inset 0px 0px 1vw 1vw rgba(0,0,0,0.71);;
+  float: left !important;
+}
+
+#dot1{
+  background-color: darkcyan;
+}
+
+
+#dot2{
+  background-color: darkslateblue;
+}
+
+#dot3{
+  background-color: darkolivegreen
+}
+
+#dot4{
+  background-color: darkred;
+}
+
+#dot5{
+  background-color: darksalmon;
+}
+#stakesParagraph{
+  margin-top: 0%;
+  margin-bottom: 0%;
+  font-size: 3vw;
+  height: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  line-height: .5vw;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+#horseAndBet{
+  border: 10px solid black;
+  width: 80%;
+  height:40vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#tvScreen, #racingScreen{
+  height: 100%;
+  vertical-align: middle;
+  width: 100%;
+  border: 1px solid black;
+  margin: 0px;
+}
+
+#racingScreen{
+  height: 40vw !important;
+  border: 5px solid black !important;
+}
