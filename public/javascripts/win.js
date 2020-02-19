@@ -94,9 +94,9 @@ function randomisedRacer(){
         stakes = new Array();
         racers = new Array();
 
-        stakes = [11,2,3,4,5,6,7,8,9,10];
-        racers[0] = "Albert";
-        racers[1] = "Bunny";
+        stakes = [6,6,6,7,7,7,8,8,8,9,9,9,10,10,10];
+        racers[0] = "Frunk";
+        racers[1] = "Owen";
         racers[2] = "Clark";
         racers[3] = "Donnie";
         racers[4] = "Elvis";
@@ -104,7 +104,7 @@ function randomisedRacer(){
         racers[6] = "Gordon";
         racers[7] = "Hilda";
         racers[8] = "Ingrid";
-        racers[9] = "Jigger";
+        racers[9] = "Martin";
 
         for(var i = 0; i < 5; i++)
         {
@@ -121,7 +121,29 @@ function randomisedRacer(){
             racers.splice(randRacer, 1);
             var randStake = Math.floor(Math.random() * stakes.length);
             var randomStake = stakes[randStake];
-            
+
+            stakes.splice(randStake, 1);
+            var itemA = document.getElementsByClassName('buttona')[i];
+            itemA.firstChild.nextSibling.textContent = randomRacer;
+            itemA.lastChild.textContent = randomStake + "/1";
+
+            if(randomStake == 6){
+                randomStake = 6;
+            }
+            if(randomStake == 7){
+                randomStake = 5;
+            }
+            if(randomStake == 8){
+                randomStake = 4;
+            }
+            if(randomStake == 9){
+                randomStake = 3;
+            }
+            if(randomStake == 10){
+                randomStake = 2;
+            }
+
+
             if(i == 0){
                 stake0 = parseInt(randomStake); 
                 horse0 = randomRacer;
@@ -143,13 +165,10 @@ function randomisedRacer(){
                 horse4 = randomRacer;
             }
 
-            stakes.splice(randStake, 1);
-
-            var itemA = document.getElementsByClassName('buttona')[i];
-            itemA.firstChild.nextSibling.textContent = randomRacer;
+            
             //stakers.push(stakeHolder[i]);
-            document.getElementById("demo").textContent += randomStake+",";
-            itemA.lastChild.textContent = randomStake + "/1";
+            //document.getElementById("demo").textContent += randomStake+",";
+            
         }
         /*
         for(var i = 0; i < 5; i++){
