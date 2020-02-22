@@ -246,10 +246,14 @@ idName1, idName2, idName3, idName4, idName5, speedBoost)
 
 	function timer(){
 		var start = Date.now();
+		var num = 15;
 		var timer = setInterval(function(){
 			var delta = Date.now() - start;
 			//document.getElementById("demo").textContent = Math.floor(delta/1000);
-			if( Math.floor(delta/1000) >= 15){
+			if($('#racingScreen').css('display') == 'block'){
+				num++;
+			}
+			if( Math.floor(delta/1000) >= num){
 				//leaderboard();
 				//alert("time up boy");
 				var person = "";
@@ -259,7 +263,8 @@ idName1, idName2, idName3, idName4, idName5, speedBoost)
 
 					person = prompt("Enter Your 3 initials:", "");
 				}
-				var cash = document.getElementById("amountOwned").textContent;
+				var cash = parseInt(document.getElementById("amountOwned").textContent)+
+				parseInt(document.getElementById("paragraph").textContent);
 				cash = parseInt(cash);
 				$.ajax({
 					url: '/addHighscore/',

@@ -7,7 +7,7 @@ $(document).ready(
             $("#charRemaining").html(totalCharacters - inputText.length);
         });
 
-        //getComments();
+        getHighscores();
         /**
          * When the page loads (or is refreshed) we request all comments from the server
          */
@@ -16,18 +16,35 @@ $(document).ready(
                 url: '/getHighscores/',
                 type: 'GET',
                 success: function (data) {
-                    console.log(data);
-                    console.log(data.length);
-					var posts = "<div id = 'tvScreen'>"+
-                                "<div id = 'horseAndBet'>";
+                    //console.log(data);
+                    //console.log(data.length);
+                    var posts = "<header class='masthead my-auto'>"+
+                    "<div class='container h-100 my-auto'>"+
+                      "<div class='row h-100 align-items-center'>"+
+                        "<div class='col-12 text-center'>"+
+                    "<div id = 'topScreen'><a href = '/'>Goblin Racers Leaderboard</a></div>"+
+                    "<div id = 'tvScreen'"+
+                    "style = 'margin:4px, 4px; padding:4px; background-color: green; "+
+                    "overflow-x: hidden; " +
+                    "overflow-x: auto;'>";
                     //alert(data.length);
+                    var scoreBoard = [];
+                    for(var i = 0; i < data.length; i++){
+                        scoreBoard.push({name: data[i].userName, score: data[i].highScore});
+                        //alert(scoreBoard[i].name);
+                        console.log(scoreBoard[i].name);
+                    }
+                    scoreBoard.sort((a, b) => (a.score < b.score) ? 1 : -1);
                     for (var i = 0; i < data.length; i++) 
 					{
-                        console.log(data[i].userName);
-                        posts += data[i].userName + " : "+
-                        data[i].highScore +"\n";
+                        //console.log(data[i].userName);
+
+                        posts += "<div style = 'border: 1px solid black'; "+
+                        "font-size: 2vw; "+
+                        "font: 'BankGothicBold';>"+scoreBoard[i].name + " : "+
+                        scoreBoard[i].score +"</div>";
                     }
-                    posts += "</div></div>";
+                    posts += "</div><div id = 'bottomScreen'><br></div></div></div></div></header>";
                     $("#leaderboardDiv").html(posts);
                 }
             });
@@ -39,6 +56,7 @@ $(document).ready(
         /**
          * Event handler for when the user posts a comment
          */
+        /*
         $("#postBtn").click(function (event) {
             //var cleanComment = $('#inputPost').val();
             //cleanComment = parseInt(cleanComment)
@@ -48,11 +66,12 @@ $(document).ready(
                 type: 'POST',
                 data: {userName: name, highScore: 30000},
                 success: function (data) {
-                    console.log(data);
+                    //console.log(data);
                     getHighscores();
                 }
             });
         });
+        */
 
         function manuallyAddHighscore(initials){
             

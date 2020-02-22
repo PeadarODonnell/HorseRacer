@@ -240,6 +240,7 @@ body{
 }
 
 #topScreen{
+  font: 'BankGothicBold';
   color: white;
   font-size: 2vw;
   border-radius: 15px 15px 0px 0px;
